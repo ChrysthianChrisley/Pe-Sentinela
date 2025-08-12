@@ -11,20 +11,20 @@ Este repositório contém o desenvolvimento do meu projeto de Mestrado Profissio
 
 ## 📖 Sobre o Projeto
 
-O objetivo deste projeto é desenvolver um **sistema de alerta precoce** para o risco de desenvolvimento de complicações nos pés em pacientes diabéticos. A abordagem combina o uso de um dispositivo vestível (*wearable*) para coleta de dados biométricos e a aplicação de técnicas de Inteligência Artificial para criar um modelo de predição robusto e personalizado.
+[cite_start]O objetivo deste projeto é desenvolver um **sistema de alerta precoce** para o risco de desenvolvimento de complicações nos pés em pacientes diabéticos[cite: 691, 3007]. A abordagem combina o uso de um dispositivo vestível (*wearable*) para coleta de dados biométricos e a aplicação de técnicas de Inteligência Artificial para criar um modelo de predição robusto e personalizado.
 
 ### 🚑 O Problema
 
-O "pé diabético" é uma das complicações mais graves e onerosas do Diabetes Mellitus, levando frequentemente a úlceras, infecções e um número alarmante de amputações. No Brasil, estima-se que 85% desses casos poderiam ser prevenidos com diagnóstico e acompanhamento adequados. Os métodos atuais de avaliação de risco baseiam-se em exames clínicos pontuais, que muitas vezes não são sensíveis o suficiente para detectar alterações subclínicas antes que o dano se torne irreversível.
+[cite_start]O "pé diabético" é uma das complicações crônicas mais graves e de maior impacto socioeconômico do Diabetes Mellitus [cite: 386][cite_start], levando frequentemente a úlceras, infecções e um número alarmante de amputações[cite: 56, 334]. [cite_start]No Brasil, entre janeiro de 2012 e maio de 2023, mais de 282 mil amputações de membros inferiores foram realizadas no SUS[cite: 635, 3000]. [cite_start]Estima-se que 85% desses casos poderiam ser prevenidos com diagnóstico e tratamento adequados[cite: 646, 3001]. [cite_start]Os métodos atuais de avaliação de risco baseiam-se em exames clínicos e questionários, que muitas vezes não são sensíveis o suficiente para detectar alterações precoces[cite: 648, 3004].
 
 ### ✨ A Solução Proposta
 
-Nossa solução se baseia na **coleta de dados longitudinal e simultânea** de três biomarcadores chave, capturados por uma palmilha sensorizada desenvolvida para este projeto:
-1.  **Pressão Plantar:** Para identificar áreas de sobrecarga mecânica.
-2.  **Temperatura:** Para detectar sinais inflamatórios precoces.
-3.  **Umidade:** Para avaliar fatores que contribuem para a maceração da pele.
+[cite_start]Nossa solução se baseia na **coleta de dados longitudinal e simultânea** de três biomarcadores chave, capturados por uma palmilha sensorizada desenvolvida para este projeto[cite: 619, 693, 3009]:
+1.  [cite_start]**Pressão Plantar:** Para identificar áreas de sobrecarga mecânica, que estão relacionadas ao desenvolvimento de úlceras nos pés[cite: 638, 2095].
+2.  [cite_start]**Temperatura:** Para detectar sinais inflamatórios precoces, sendo que a termografia já é uma tecnologia utilizada para alerta avançado de complicações[cite: 2598].
+3.  [cite_start]**Umidade:** Para avaliar fatores que contribuem para a maceração da pele, visto que a presença de micose interdigital é uma porta de entrada para infecções[cite: 417, 504].
 
-Esses dados alimentarão um modelo de Machine Learning treinado para identificar padrões complexos que indiquem um risco elevado de complicações, gerando alertas para pacientes e profissionais de saúde antes da manifestação clínica dos problemas.
+[cite_start]Esses dados alimentarão um modelo de Machine Learning treinado para identificar padrões complexos que indiquem um risco elevado de complicações[cite: 620], gerando alertas para pacientes e profissionais de saúde antes da manifestação clínica dos problemas.
 
 ---
 
@@ -32,8 +32,8 @@ Esses dados alimentarão um modelo de Machine Learning treinado para identificar
 
 Este projeto se diferencia da literatura existente por quatro pilares principais:
 
-* **Metodologia de Coleta Inovadora e Completa:** Nenhum dos trabalhos analisados combina a coleta **longitudinal e simultânea de pressão, temperatura e umidade** através de um dispositivo vestível (wearable). Estamos propondo um monitoramento contínuo, no dia a dia do paciente.
-* **Foco na Predição *Antes* da Úlcera:** O objetivo é um **alerta precoce** para PREVENIR o surgimento da complicação. Isso se contrapõe a trabalhos que focam em estágios mais avançados, como prever a amputação em quem já tem úlcera ou analisar a úlcera depois que ela já existe.
+* [cite_start]**Metodologia de Coleta Inovadora e Completa:** Nenhum dos trabalhos analisados combina a coleta **longitudinal e simultânea de pressão, temperatura e umidade** através de um dispositivo vestível (wearable)[cite: 661]. Estamos propondo um monitoramento contínuo, no dia a dia do paciente.
+* [cite_start]**Foco na Predição *Antes* da Úlcera:** O objetivo é um **alerta precoce** para PREVENIR o surgimento da complicação[cite: 655]. [cite_start]Isso se contrapõe a trabalhos que focam em estágios mais avançados, como prever a amputação em quem já tem úlcera [cite: 2342] [cite_start]ou analisar a úlcera depois que ela já existe[cite: 901].
 * **Desenvolvimento de um Sistema Aplicado (Mestrado Profissional):** Nossa proposta vai além do modelo matemático e visa entregar um **sistema funcional** com interface, alertas e recomendações, o que representa uma contribuição tecnológica direta e com potencial de implementação.
 * **Contexto Nacional (Brasil/SUS) com Coleta de Dados Primários:** Vamos gerar um conjunto de dados para a **população brasileira**. Um modelo de IA treinado com dados de pacientes do SUS terá muito mais relevância e acurácia para a nossa realidade do que modelos baseados em outras populações.
 
@@ -44,8 +44,8 @@ Este projeto se diferencia da literatura existente por quatro pilares principais
 O projeto será desenvolvido utilizando as seguintes tecnologias:
 
 * **Hardware:**
-    * Placa de Desenvolvimento: `ESP32 DevKit`
-    * Sensores: Sensores de Pressão (FSR), Temperatura e Umidade.
+    * [cite_start]Placa de Desenvolvimento: `ESP32 DevKit` [cite: 3101]
+    * [cite_start]Sensores: Sensores de Pressão (FSR), Temperatura e Umidade[cite: 619, 760, 3100].
 * **Software & Data Science:**
     * Linguagem: `Python`
     * Bibliotecas Principais: `Pandas`, `NumPy`, `Scikit-learn`, `Matplotlib`, `Seaborn`.
@@ -77,7 +77,7 @@ O projeto encontra-se atualmente na fase de **Desenvolvimento do Protótipo e Pl
 
 Chrysthian Chrisley Tadeu Santos Silva - [cytchrisley@gmail.com](mailto:cytchrisley@gmail.com)
 
-Link do Projeto: [https://github.com/ChrysthianChrisley/Pe-Sentinela.git](https://github.com/ChrysthianChrisley/Pe-Sentinela.git)
+Link do Projeto: [https://github.com/ChrysthianChrisley/Pe-Sentinela](https://github.com/ChrysthianChrisley/Pe-Sentinela)
 
 ---
 
