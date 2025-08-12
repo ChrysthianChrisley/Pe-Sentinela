@@ -3,129 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Análise Comparativa - Projeto de Mestrado</title>
+    <title>Projeto Pé-Sentinela | Mestrado em Telessaúde UERJ</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-    <header>
-        <h1>Análise Comparativa de Projetos de Pesquisa</h1>
-        <p>Análise detalhada do meu projeto de mestrado em comparação com a literatura científica fornecida.</p>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="brand">Pé-Sentinela 🦶</a>
+            <ul class="nav-links">
+                <li><a href="#problema">O Problema</a></li>
+                <li><a href="#solucao">Nossa Solução</a></li>
+                <li><a href="#arquitetura">Arquitetura</a></li>
+                <li><a href="#prototipo">Protótipo</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Projeto Pé-Sentinela</h1>
+            <p class="subtitle">Usando Inteligência Artificial e Dispositivos Vestíveis para Prevenir Complicações do Pé Diabético.</p>
+            <p>Um projeto de Mestrado Profissional em Telessaúde e Saúde Digital - UERJ.</p>
+        </div>
     </header>
 
-    <main>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Critério de Análise</th>
-                        <th>MOREIRA, J. B et al. (2020)</th>
-                        <th>TAVARES, T. A et al. (2016)</th>
-                        <th>ZHANG, L.-Y. et al. (2023)</th>
-                        <th>STEFANOPOULOS, S. et al. (2024)</th>
-                        <th>HUANG, J. et al. (2023)</th>
-                        <th>YAP, M. H. et al. (2024)</th>
-                        <th class="user-project">Meu Projeto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Objetivo Principal</strong></td>
-                        <td>Avaliar o efeito de uma intervenção educativa (grupo operativo) no ensino do autocuidado para prevenção do pé diabético.</td>
-                        <td>Analisar fatores de risco (sociodemográficos, clínicos, estilo de vida) para ulceração e amputação em diabéticos.</td>
-                        <td>Analisar a deformação do pé e a distribuição da pressão plantar em diferentes velocidades de caminhada.</td>
-                        <td>Criar um modelo de Machine Learning para prever a probabilidade de <strong>amputação maior</strong> em pacientes <strong>já hospitalizados</strong> com úlcera do pé diabético (UPD).</td>
-                        <td>Fornecer uma perspectiva geral e apresentar avanços de como a IA pode ser aplicada para prever e diagnosticar 6 complicações do diabetes, incluindo UPDs.</td>
-                        <td>Apresentar os resultados de um desafio de programação focado na <strong>segmentação</strong> (delineamento) de úlceras em imagens.</td>
-                        <td class="user-project"><strong>Desenvolver um sistema de alerta precoce para o risco de desenvolvimento de complicações, usando modelagem preditiva e IA com dados de sensores vestíveis</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>População do Estudo</strong></td>
-                        <td>109 voluntários com Diabetes Mellitus tipo 2, de uma unidade de saúde em Minas Gerais.</td>
-                        <td>92 indivíduos diabéticos de uma Unidade de Saúde da Família em Maceió, Alagoas.</td>
-                        <td>19 pacientes diabéticas do sexo feminino.</td>
-                        <td>326.853 pacientes <strong>internados</strong> com UPD, de um banco de dados dos EUA (NIS).</td>
-                        <td>Revisão de múltiplos trabalhos.</td>
-                        <td>Dados de imagens de pacientes em hospitais do Reino Unido.</td>
-                        <td class="user-project"><strong>Pacientes diabéticos e um grupo controle no Brasil, para coleta de dados primários</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Metodologia (Sensores)</strong></td>
-                        <td>Avaliação clínica pontual com monofilamento, diapasão, câmera termográfica e baropodômetro.</td>
-                        <td>Avaliação pontual com Monofilamento e palpação de pulsos.</td>
-                        <td>Sistema de escaneamento 4D e sistema Pedar in-shoe para medir pressão plantar em laboratório.</td>
-                        <td>Nenhum. Utiliza dados de prontuário eletrônico.</td>
-                        <td>Discute o uso de sensores em geral.</td>
-                        <td>Nenhum. Utiliza <strong>imagens fotográficas</strong>.</td>
-                        <td class="user-project"><strong>Palmilhas com múltiplos sensores: pressão, temperatura e umidade para coleta de dados contínuos</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Metodologia (Hardware)</strong></td>
-                        <td>Câmera termográfica (E-60 bx) e Baropodômetro (Arkipélago®).</td>
-                        <td>Monofilamento de Semmes-Weinstein (10g).</td>
-                        <td>Sistema de escaneamento 3dMD e sistema Pedar.</td>
-                        <td>Nenhum. Análise de banco de dados.</td>
-                        <td>Não aplicável.</td>
-                        <td>Câmeras digitais.</td>
-                        <td class="user-project"><strong>Dispositivo vestível customizado, baseado na placa ESP32 DevKit e palmilhas sensorizadas</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Metodologia (Algoritmos)</strong></td>
-                        <td>Testes estatísticos tradicionais (Qui-Quadrado, Mann-Whitney, etc.).</td>
-                        <td>Testes estatísticos tradicionais.</td>
-                        <td>Testes estatísticos (ANOVA).</td>
-                        <td><strong>Machine Learning:</strong> Árvore de Decisão (CTREE) e Random Forest.</td>
-                        <td>Discute vários algoritmos de IA.</td>
-                        <td><strong>Deep Learning (Redes Neurais Convolucionais)</strong> para segmentação de imagem.</td>
-                        <td class="user-project"><strong>Machine Learning:</strong> Planeja usar Redes Neurais, Árvores de Decisão, SVM, e algoritmos de ensemble.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>"Produto" Final</strong></td>
-                        <td>Conclusão sobre a eficácia de uma intervenção educativa.</td>
-                        <td>Identificação de fatores de risco com associação estatística.</td>
-                        <td>Recomendações de design para calçados.</td>
-                        <td>Um <strong>algoritmo clínico</strong> que prevê o risco de amputação (acurácia de 77,8%).</td>
-                        <td>Uma <strong>visão geral</strong> das aplicações da IA.</td>
-                        <td>Um <strong>benchmark</strong> dos melhores algoritmos para <strong>segmentar</strong> úlceras.</td>
-                        <td class="user-project"><strong>Um sistema completo de alerta precoce, com interface amigável para pacientes e profissionais, gerando alertas e recomendações</strong>.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Limitações Declaradas</strong></td>
-                        <td>Curto período do estudo.</td>
-                        <td>Universo do estudo restrito a um único grupo de pacientes.</td>
-                        <td>Amostra pequena (19 participantes) e apenas do sexo feminino.</td>
-                        <td>Estudo retrospectivo baseado em dados administrativos (códigos de cobrança).</td>
-                        <td>Não aplicável.</td>
-                        <td>Performance menor em úlceras pequenas.</td>
-                        <td class="user-project">Possíveis: desconforto do paciente, falhas técnicas, variabilidade dos dados, etc.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <section class="summary">
-            <h2>🎯 Diferenciais e Contribuição para a Área</h2>
-            <ul>
-                <li>
-                    <strong>Metodologia de Coleta Inovadora e Completa:</strong> 
-                    <span>Nenhum dos trabalhos analisados combina a coleta <b>longitudinal e simultânea de pressão, temperatura e umidade</b> através de um dispositivo vestível (wearable).</span> 
-                    <span>Estamos propondo um monitoramento contínuo, no dia a dia do paciente.</span>
-                </li>
-                <li>
-                    <strong>Foco na Predição <em>Antes</em> da Úlcera:</strong>
-                    <span>O objetivo é um <b>alerta precoce</b> para PREVENIR o surgimento da complicação. Isso se contrapõe a trabalhos que focam em estágios mais avançados, como prever a amputação em quem já tem úlcera ou analisar a úlcera depois que ela já existe.</span>
-                </li>
-                <li>
-                    <strong>Desenvolvimento de um Sistema Aplicado (Mestrado Profissional):</strong>
-                    <span>Sua proposta vai além do modelo matemático e visa entregar um <b>sistema funcional</b> com interface, alertas e recomendações, o que representa uma contribuição tecnológica direta e com potencial de implementação.</span>
-                </li>
-                <li>
-                    <strong>Contexto Nacional (Brasil/SUS) com Coleta de Dados Primários:</strong>
-                    <span>Vamos gerar um conjunto de dados para a <b>população brasileira</b>. Um modelo de IA treinado com dados de pacientes do SUS terá muito mais relevância e acurácia para a nossa realidade do que modelos baseados em outras populações.</span>
-                </li>
-            </ul>
+    <main class="container">
+        
+        <section id="problema" class="card">
+            <h2>🚑 O Problema: Uma Emergência Silenciosa</h2>
+            <div class="problem-stats">
+                <div>
+                    <h3>+282 mil</h3>
+                    <p>Amputações no SUS (2012-2023)</p>
+                </div>
+                <div>
+                    <h3>85%</h3>
+                    <p>Dos casos poderiam ser prevenidos</p>
+                </div>
+                <div>
+                    <h3>R$ 1 Bilhão</h3>
+                    <p>Custo anual estimado para o SUS com úlceras</p>
+                </div>
+            </div>
+            <p>A prevenção atual, baseada em exames clínicos pontuais, muitas vezes falha em detectar os sinais precoces de inflamação e sobrecarga mecânica que levam a úlceras e amputações.</p>
         </section>
+
+        <section id="solucao" class="card">
+            <h2>✨ Nossa Solução: Prevenção Preditiva e Proativa</h2>
+            <p>O Pé-Sentinela é um sistema completo que monitora continuamente os pés do paciente para identificar riscos antes que eles se tornem problemas graves. A solução se divide em duas frentes:</p>
+            <div class="solution-parts">
+                <div class="part">
+                    <h3>Hardware: A Palmilha Inteligente</h3>
+                    <p>Um dispositivo vestível (wearable) discreto, na forma de uma palmilha, realiza a coleta <strong>longitudinal e simultânea</strong> de 3 biomarcadores essenciais: <strong>pressão plantar, temperatura e umidade</strong>. Os dados são enviados via Bluetooth para o smartphone do paciente.</p>
+                </div>
+                <div class="part">
+                    <h3>Software: A Inteligência Artificial</h3>
+                    <p>Os dados coletados alimentam um modelo de Machine Learning na nuvem. A IA é treinada para reconhecer padrões complexos e sutis que precedem as complicações, gerando alertas personalizados para o paciente e para a equipe de saúde através de um aplicativo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="arquitetura" class="card">
+            <h2>🛠️ Arquitetura do Sistema</h2>
+            <p>Aqui será apresentado o diagrama técnico do projeto, detalhando o fluxo de dados desde o sensor até a interface do usuário. (Conteúdo a ser desenvolvido no estágio).</p>
+            <div class="placeholder">Espaço reservado para o Diagrama de Arquitetura</div>
+        </section>
+
+        <section id="prototipo" class="card">
+            <h2>📱 Protótipo da Interface (UI)</h2>
+            <p>Abaixo, uma demonstração de como as telas do aplicativo para o paciente e para o profissional de saúde serão estruturadas. (Conteúdo a ser desenvolvido no estágio).</p>
+            <div class="placeholder">Espaço reservado para os Mockups ou Protótipo Interativo</div>
+        </section>
+
+        <section id="dashboard" class="card">
+            <h2>📊 Prova de Conceito (Dashboard)</h2>
+            <p>Para validar a viabilidade da visualização de dados, criamos este dashboard interativo que exibe <strong>dados simulados</strong> de um paciente ao longo de 24 horas. Observe como o sistema poderia identificar e sinalizar um alerta de risco (área em vermelho).</p>
+            <canvas id="sensorChart"></canvas>
+            <p class="chart-caption">Gráfico demonstrando a variação simulada de Pressão (kPa) e Temperatura (°C) no mesmo ponto do pé. O aumento simultâneo e sustentado de ambos gera um alerta.</p>
+        </section>
+
+        <section class="card link-card">
+            <h2>📚 Análise Comparativa Detalhada</h2>
+            <p>Para uma análise aprofundada de como este projeto se posiciona em relação à literatura científica atual, acesse nossa página de análise comparativa.</p>
+            <a href="analiseComparativa.html" class="button">Ver Análise Completa</a>
+        </section>
+
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Projeto Pé-Sentinela</strong> | Chrysthian Chrisley Tadeu Santos Silva</p>
+            <p>Mestrado Profissional em Telessaúde e Saúde Digital - UERJ</p>
+            <a href="https://github.com/ChrysthianChrisley/Pe-Sentinela" class="button">Ver no GitHub</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
