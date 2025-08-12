@@ -1,0 +1,120 @@
+/* Configurações Gerais */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f7f9;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+/* Container da Tabela para Responsividade */
+.table-container {
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Estilos da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 1600px; /* Garante que a tabela tenha um tamanho mínimo antes de rolar */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background-color: #34495e;
+    color: white;
+    font-size: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+tbody tr:hover {
+    background-color: #d6eaf8;
+}
+
+td strong {
+    color: #2980b9;
+    font-weight: 600;
+}
+
+/* Coluna de destaque */
+.user-project {
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+thead .user-project {
+    background-color: #27ae60;
+}
+
+
+/* Seção de Resumo */
+.summary {
+    background-color: #ffffff;
+    padding: 25px;
+    border-left: 5px solid #2ecc71;
+    margin-top: 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.summary li {
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.summary li::before {
+    content: '✔';
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.summary li strong {
+    display: block;
+    color: #2c3e50;
+    font-size: 1.1em;
+}
