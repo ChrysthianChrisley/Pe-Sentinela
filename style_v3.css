@@ -1,0 +1,167 @@
+/* =================================
+   CONFIGURAÇÕES GERAIS
+   ================================= */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    background-color: #f4f7f9;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =================================
+   CABEÇALHO E ELEMENTOS COMUNS
+   ================================= */
+.header-prototipo {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+.header-prototipo h1 { margin: 0; }
+.button-back {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* =================================
+   ESTRUTURA DO PROTÓTIPO
+   ================================= */
+.prototype-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+.view-panel {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    flex-basis: 480px;
+}
+.view-panel h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+/* =================================
+   PAINEL DE CONTROLE (SLIDERS)
+   ================================= */
+.control-panel h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+.slider-container { margin-bottom: 15px; }
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.slider-container input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* =================================
+   PAINEL DE DISPLAY (APP)
+   ================================= */
+.phone-screen {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+.screen-header {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.dashboard-status {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-width: 1px;
+    border-style: solid;
+    transition: all 0.3s ease;
+}
+.data-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.data-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    border-left-width: 5px;
+    border-left-style: solid;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+.data-card h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.8em;
+    color: #34495e;
+}
+.data-card p {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.recommendation-card {
+    padding: 15px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+}
+.recommendation-card h4 { margin: 0 0 10px 0; }
+.recommendation-card p { margin: 0; }
+
+/* =================================
+   SISTEMA DE CORES DINÂMICO
+   ================================= */
+.status-ok {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-color: #2ecc71;
+    color: #27ae60;
+}
+.status-warning {
+    background-color: rgba(243, 156, 18, 0.1);
+    border-color: #f39c12;
+    color: #d35400;
+}
+.status-danger {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-color: #e74c3c;
+    color: #c0392b;
+    animation: pulse 1.8s infinite ease-in-out;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(231, 76, 60, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo v2 | Sistema de Cores de Risco</title>
+    <link rel="stylesheet" href="style_v2.css">
+</head>
+<body>
+
+    <header class="header-prototipo">
+        <h1>Protótipo v2: Sistema de Cores de Risco</h1>
+        <p>Demonstração visual dos estados de alerta (Normal, Alerta e Risco Elevado) do aplicativo Pé-Sentinela.</p>
+        <a href="index.html" class="button button-back">Voltar para a Página Principal</a>
+    </header>
+
+    <div class="container prototype-wrapper">
+
+        <div class="view-panel">
+            <h2>Cenário 1: Tudo Certo (Risco Baixo)</h2>
+            <div class="phone-screen">
+                <div class="screen-header">Pé-Sentinela | Início</div>
+                <div class="dashboard-status status-ok">
+                    <div class="status-icon">✔️</div>
+                    <h3>Monitoramento Normal</h3>
+                    <p>Nenhum risco detectado. Os parâmetros estão dentro da faixa de segurança.</p>
+                </div>
+                <div class="data-card-grid">
+                    <div class="data-card status-ok">
+                        <h4>Temp. Média (Pé D.)</h4>
+                        <p>31.5 °C</p>
+                    </div>
+                    <div class="data-card status-ok">
+                        <h4>Temp. Média (Pé E.)</h4>
+                        <p>31.2 °C</p>
+                    </div>
+                    <div class="data-card status-ok">
+                        <h4>Pressão Máx. (Pé D.)</h4>
+                        <p>89 kPa</p>
+                    </div>
+                    <div class="data-card status-ok">
+                        <h4>Pressão Máx. (Pé E.)</h4>
+                        <p>86 kPa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-panel">
+            <h2>Cenário 2: Alerta (Risco Moderado)</h2>
+            <div class="phone-screen">
+                <div class="screen-header">Pé-Sentinela | Atenção!</div>
+                <div class="dashboard-status status-warning">
+                    <div class="status-icon">⚠️</div>
+                    <h3>Sinal de Alerta</h3>
+                    <p>Detectamos uma diferença de temperatura significativa entre seus pés.</p>
+                </div>
+                 <div class="data-card-grid">
+                    <div class="data-card status-warning">
+                        <h4>Temp. Média (Pé D.)</h4>
+                        <p>33.8 °C</p>
+                    </div>
+                    <div class="data-card status-ok">
+                        <h4>Temp. Média (Pé E.)</h4>
+                        <p>31.4 °C</p>
+                    </div>
+                    <div class="data-card status-warning">
+                        <h4>Pressão Máx. (Pé D.)</h4>
+                        <p>135 kPa</p>
+                    </div>
+                    <div class="data-card status-ok">
+                        <h4>Pressão Máx. (Pé E.)</h4>
+                        <p>88 kPa</p>
+                    </div>
+                </div>
+                 <div class="recommendation-card status-warning">
+                    <h4>Recomendação:</h4>
+                    <p>Inspecione o seu pé direito (região do metatarso) em busca de vermelhidão ou inchaço. Reduza a atividade física hoje e continue monitorando.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-panel">
+            <h2>Cenário 3: Risco Elevado (Crítico)</h2>
+            <div class="phone-screen">
+                <div class="screen-header">Pé-Sentinela | Risco Elevado!</div>
+                <div class="dashboard-status status-danger">
+                    <div class="status-icon">🚨</div>
+                    <h3>Risco Elevado Detectado</h3>
+                    <p>A temperatura do seu pé esquerdo está muito alta, indicando possível infecção.</p>
+                </div>
+                <div class="data-card-grid">
+                    <div class="data-card status-ok">
+                        <h4>Temp. Média (Pé D.)</h4>
+                        <p>32.1 °C</p>
+                    </div>
+                    <div class="data-card status-danger">
+                        <h4>Temp. Média (Pé E.)</h4>
+                        <p>35.2 °C</p>
+                    </div>
+                    <div class="data-card status-ok">
+                        <h4>Pressão Máx. (Pé D.)</h4>
+                        <p>95 kPa</p>
+                    </div>
+                    <div class="data-card status-danger">
+                        <h4>Pressão Máx. (Pé E.)</h4>
+                        <p>190 kPa</p>
+                    </div>
+                </div>
+                 <div class="recommendation-card status-danger">
+                    <h4>Ação Urgente:</h4>
+                    <p>Entre em contato com sua equipe de saúde imediatamente. Não aplique medicação sem orientação. Mantenha o pé em repouso.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

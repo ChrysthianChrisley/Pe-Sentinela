@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo de Interface | Projeto Pé-Sentinela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-prototipo">
+        <h1>Protótipo de Interface (UI/UX)</h1>
+        <p>Demonstração visual das telas principais do sistema Pé-Sentinela.</p>
+        <a href="index.html" class="button button-back">Voltar para a Página Principal</a>
+    </header>
+
+    <div class="container prototype-wrapper">
+
+        <div class="view-panel">
+            <h2>Visão do Paciente (Aplicativo)</h2>
+            
+            <div class="phone-screen">
+                <div class="screen-header">Pé-Sentinela | Início</div>
+                <div class="dashboard-status status-ok">
+                    <div class="status-icon">✔️</div>
+                    <h3>Tudo Certo!</h3>
+                    <p>Nenhum risco detectado nas últimas 24h. Continue com os bons cuidados!</p>
+                </div>
+                <div class="data-card">
+                    <h4>Temperatura Média (Pé D.)</h4>
+                    <p>31.5 °C</p>
+                </div>
+                <div class="data-card">
+                    <h4>Temperatura Média (Pé E.)</h4>
+                    <p>31.2 °C</p>
+                </div>
+                <div class="data-card">
+                    <h4>Pressão Máxima (Pé D.)</h4>
+                    <p>89 kPa</p>
+                </div>
+                <div class="data-card">
+                    <h4>Pressão Máxima (Pé E.)</h4>
+                    <p>86 kPa</p>
+                </div>
+            </div>
+
+            <div class="phone-screen">
+                <div class="screen-header">Pé-Sentinela | Alerta!</div>
+                <div class="dashboard-status status-alert">
+                    <div class="status-icon">⚠️</div>
+                    <h3>Alerta de Risco Detectado</h3>
+                    <p>Detectamos um aumento de temperatura e pressão contínuo no seu <strong>pé direito (calcanhar)</strong>.</p>
+                </div>
+                <div class="data-card">
+                    <h4>Recomendação Imediata:</h4>
+                    <p class="recommendation-text">
+                        1. Retire o calçado e inspecione a área indicada.<br>
+                        2. Evite caminhadas longas hoje.<br>
+                        3. A equipe de saúde já foi notificada.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-panel">
+            <h2>Visão do Profissional (Dashboard Web)</h2>
+
+            <div class="phone-screen">
+                <div class="screen-header">Dashboard | Meus Pacientes</div>
+                <div class="patient-list">
+                    <div class="patient-list-item alert">
+                        <div class="patient-status-icon status-icon-warning"></div>
+                        <span>Sra. Maria Oliveira (Alerta Ativo)</span>
+                    </div>
+                    <div class="patient-list-item">
+                        <div class="patient-status-icon status-icon-ok"></div>
+                        <span>Sr. João Pereira</span>
+                    </div>
+                    <div class="patient-list-item">
+                        <div class="patient-status-icon status-icon-ok"></div>
+                        <span>Sra. Ana Costa</span>
+                    </div>
+                     <div class="patient-list-item">
+                        <div class="patient-status-icon status-icon-ok"></div>
+                        <span>Sr. José Santos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phone-screen">
+                <div class="screen-header">Paciente: Sra. Maria Oliveira</div>
+                <div class="dashboard-status status-alert">
+                    <div class="status-icon">⚠️</div>
+                    <h3>Alerta de Risco Elevado</h3>
+                    <p>Aumento de <strong>temperatura (+2.1°C)</strong> e <strong>pressão (+35kPa)</strong> por mais de 48h no pé direito (calcanhar).</p>
+                </div>
+                <div class="data-card">
+                    <h4>Histórico Recente:</h4>
+                    <p class="chart-placeholder">_Mini-gráfico_</p>
+                    <p class="small-text">Dados mostram tendência de alta nos últimos 3 dias.</p>
+                </div>
+                 <div class="data-card">
+                    <h4>Ação Recomendada:</h4>
+                    <p class="recommendation-text">Entrar em contato com a paciente para agendar teleconsulta ou avaliação presencial em até 24h.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

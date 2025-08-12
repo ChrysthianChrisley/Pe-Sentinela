@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo v3 | Simulação Interativa de Risco</title>
+    <link rel="stylesheet" href="style_v3.css">
+</head>
+<body>
+
+    <header class="header-prototipo">
+        <h1>Protótipo v3: Simulador de Risco Interativo</h1>
+        <p>Altere os valores de temperatura, pressão e umidade para ver a resposta do sistema em tempo real.</p>
+        <a href="index.html" class="button button-back">Voltar para a Página Principal</a>
+    </header>
+
+    <div class="container prototype-wrapper">
+
+        <div class="view-panel control-panel">
+            <h2>Painel de Simulação</h2>
+            
+            <div class="control-group">
+                <h3>Pé Direito</h3>
+                <div class="slider-container">
+                    <label for="temp-d">Temperatura (°C): <span id="temp-d-value">31.5</span></label>
+                    <input type="range" id="temp-d" name="temp-d" min="20" max="40" value="31.5" step="0.1">
+                </div>
+                <div class="slider-container">
+                    <label for="press-d">Pressão (kPa): <span id="press-d-value">90</span></label>
+                    <input type="range" id="press-d" name="press-d" min="50" max="800" value="90" step="5">
+                </div>
+                <div class="slider-container">
+                    <label for="umid-d">Umidade (%): <span id="umid-d-value">25</span></label>
+                    <input type="range" id="umid-d" name="umid-d" min="10" max="90" value="25" step="1">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h3>Pé Esquerdo</h3>
+                <div class="slider-container">
+                    <label for="temp-e">Temperatura (°C): <span id="temp-e-value">31.2</span></label>
+                    <input type="range" id="temp-e" name="temp-e" min="20" max="40" value="31.2" step="0.1">
+                </div>
+                 <div class="slider-container">
+                    <label for="press-e">Pressão (kPa): <span id="press-e-value">85</span></label>
+                    <input type="range" id="press-e" name="press-e" min="50" max="800" value="85" step="5">
+                </div>
+                <div class="slider-container">
+                    <label for="umid-e">Umidade (%): <span id="umid-e-value">28</span></label>
+                    <input type="range" id="umid-e" name="umid-e" min="10" max="90" value="28" step="1">
+                </div>
+            </div>
+        </div>
+
+        <div class="view-panel display-panel">
+            <h2>Visão do Paciente (Aplicativo)</h2>
+            <div class="phone-screen">
+                <div class="screen-header">Pé-Sentinela | Início</div>
+                <div id="status-geral" class="dashboard-status">
+                    <div id="status-geral-icon" class="status-icon">✔️</div>
+                    <h3 id="status-geral-titulo">Monitoramento Normal</h3>
+                    <p id="status-geral-texto">Nenhum risco detectado. Os parâmetros estão dentro da faixa de segurança.</p>
+                </div>
+                <div class="data-card-grid">
+                    <div id="card-temp-d" class="data-card">
+                        <h4>Temp. (Pé D.)</h4>
+                        <p id="display-temp-d">31.5 °C</p>
+                    </div>
+                    <div id="card-temp-e" class="data-card">
+                        <h4>Temp. (Pé E.)</h4>
+                        <p id="display-temp-e">31.2 °C</p>
+                    </div>
+                    <div id="card-press-d" class="data-card">
+                        <h4>Pressão (Pé D.)</h4>
+                        <p id="display-press-d">90 kPa</p>
+                    </div>
+                    <div id="card-press-e" class="data-card">
+                        <h4>Pressão (Pé E.)</h4>
+                        <p id="display-press-e">85 kPa</p>
+                    </div>
+                    <div id="card-umid-d" class="data-card">
+                        <h4>Umidade (Pé D.)</h4>
+                        <p id="display-umid-d">25 %</p>
+                    </div>
+                    <div id="card-umid-e" class="data-card">
+                        <h4>Umidade (Pé E.)</h4>
+                        <p id="display-umid-e">28 %</p>
+                    </div>
+                </div>
+                <div id="recommendation-card" class="recommendation-card">
+                    <h4>Recomendação:</h4>
+                    <p id="recommendation-text">Continue com os bons cuidados e mantenha a rotina de inspeção dos pés.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script_v3.js"></script>
+</body>
+</html>
