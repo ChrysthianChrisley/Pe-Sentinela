@@ -103,19 +103,6 @@ h2 {
     margin: 10px auto;
 }
 
-.problem-stats {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin: 30px 0;
-    flex-wrap: wrap;
-}
-.problem-stats h3 {
-    font-size: 2.5rem;
-    color: #e74c3c;
-    margin: 0;
-}
-
 .solution-parts {
     display: flex;
     gap: 30px;
@@ -157,206 +144,115 @@ h2 {
 
 
 /* =================================
-   ESTILOS PARA ANALISECOMPARATIVA.HTML
+   ESTILOS PARA ESTATÍSTICAS INTERATIVAS
    ================================= */
-header {
+.problem-stats {
+    display: flex;
+    justify-content: space-around;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    align-items: center; 
 }
 
-.table-container {
-    overflow-x: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+.stat-item {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px; 
 }
 
-table {
+.stat-item h3 {
+    font-size: 3rem;
+    color: #e74c3c;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.stat-item p {
+    color: #7f8c8d;
+    margin: 0;
+}
+
+/* Barra de Progresso */
+.progress-bar-container {
     width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    min-width: 1600px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: left;
-    vertical-align: top;
-}
-
-thead th {
-    background-color: #34495e;
-    color: white;
-    font-size: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-tbody tr:nth-child(even) { background-color: #ecf0f1; }
-tbody tr:hover { background-color: #d6eaf8; }
-td strong {
-    color: #2980b9;
-    font-weight: 600;
-}
-
-.user-project { background-color: rgba(46, 204, 113, 0.1); }
-thead .user-project { background-color: #27ae60; }
-
-.summary {
-    background-color: #ffffff;
-    padding: 25px;
-    border-left: 5px solid #2ecc71;
-    margin-top: 40px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-.summary ul {
-    list-style-type: none;
-    padding: 0;
-}
-.summary li {
-    margin-bottom: 20px;
-    padding-left: 25px;
+    height: 48px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    margin: 0 auto 10px auto;
     position: relative;
-}
-.summary li::before {
-    content: '✔';
-    color: #27ae60;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-.summary li strong {
-    display: block;
-    color: #2c3e50;
-    font-size: 1.1em;
+    overflow: hidden;
 }
 
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #f39c12, #e67e22);
+    border-radius: 10px;
+    transition: width 2s ease-out;
+}
+
+.progress-bar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
 
 /* =================================
-   ESTILOS PARA PROTOTIPOUi.HTML
+   ESTILOS PARA FONTE (TOOLTIP) - CORRIGIDO
    ================================= */
-.header-prototipo {
+.source-container {
+    position: relative; /* O parágrafo agora é o contêiner */
+    cursor: help;
+    /* Adiciona um sublinhado pontilhado para indicar interatividade */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #7f8c8d;
+    display: inline-block; /* Necessário para o tooltip funcionar bem */
+}
+
+.source-tooltip {
+    /* Aparência do tooltip */
+    visibility: hidden; 
+    opacity: 0;
+    width: 280px;
+    background-color: #34495e;
+    color: #fff;
     text-align: center;
-    padding: 40px 20px;
-    background-color: #2c3e50;
-    color: white;
-}
-.header-prototipo h1 { margin: 0; }
-.header-prototipo p {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-.button-back { margin-top: 20px; }
-
-.prototype-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    margin-top: 40px;
-}
-.view-panel {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    padding: 20px;
-    flex-basis: 450px;
-}
-.view-panel h2 {
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 0;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posição acima do parágrafo */
+    left: 50%;
+    margin-left: -140px; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-size: 0.85em;
 }
 
-.phone-screen {
-    background-color: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 20px;
-}
-.screen-header {
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 15px;
+/* Setinha para o tooltip */
+.source-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #34495e transparent transparent transparent;
 }
 
-.dashboard-status {
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+/* Exibe o tooltip quando o mouse passa por cima do parágrafo */
+.source-container:hover .source-tooltip {
+    visibility: visible;
+    opacity: 1;
 }
-.status-ok {
-    background-color: rgba(46, 204, 113, 0.1);
-    color: #27ae60;
-    border: 1px solid #27ae60;
-}
-.status-alert {
-    background-color: rgba(231, 76, 60, 0.1);
-    color: #c0392b;
-    border: 1px solid #c0392b;
-    animation: pulse 1.5s infinite;
-}
-.dashboard-status .status-icon { font-size: 3rem; }
-.dashboard-status h3 { margin: 10px 0 5px 0; }
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
-}
-
-.data-card {
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 10px;
-}
-.data-card h4 {
-    margin: 0 0 10px 0;
-    color: #34495e;
-}
-.data-card p {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.recommendation-text {
-    font-size: 1rem !important;
-    font-weight: normal !important;
-}
-.small-text { font-weight: normal !important; }
-.chart-placeholder {
-    font-style: italic;
-    color: #7f8c8d;
-    text-align: center;
-}
-
-.patient-list-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-}
-.patient-list-item.alert {
-    background-color: rgba(243, 156, 18, 0.1);
-    font-weight: bold;
-}
-.patient-status-icon {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin-right: 15px;
-    flex-shrink: 0;
-}
-.status-icon-ok { background-color: #2ecc71; }
-.status-icon-warning { background-color: #f39c12; }

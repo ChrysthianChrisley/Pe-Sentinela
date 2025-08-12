@@ -35,17 +35,32 @@
         <section id="problema" class="card">
             <h2>🚑 O Problema: Uma Emergência Silenciosa</h2>
             <div class="problem-stats">
-                <div>
-                    <h3>+282 mil</h3>
-                    <p>Amputações no SUS (2012-2023)</p>
+
+                <div class="stat-item">
+                    <h3 id="amputacoes-counter">+282 mil</h3>
+                    <p class="source-container">
+                        Amputações no SUS (2012-2023)
+                        <span class="source-tooltip">Fonte: Sociedade Brasileira de Angiologia e de Cirurgia Vascular (SBACV), 2023.</span>
+                    </p>
                 </div>
-                <div>
-                    <h3>85%</h3>
-                    <p>Dos casos poderiam ser prevenidos</p>
+
+                <div class="stat-item">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="prevencao-bar"></div>
+                        <h3 class="progress-bar-text"><span id="prevencao-counter">85</span>%</h3>
+                    </div>
+                    <p class="source-container">
+                        Dos casos poderiam ser prevenidos
+                        <span class="source-tooltip">Fonte: Sociedade Brasileira de Angiologia e de Cirurgia Vascular (SBACV), 2023.</span>
+                    </p>
                 </div>
-                <div>
-                    <h3>R$ 1 Bilhão</h3>
-                    <p>Custo anual estimado para o SUS com úlceras</p>
+
+                <div class="stat-item">
+                    <h3 id="custo-heading">R$ 0</h3>
+                    <p class="source-container">
+                        Custo anual estimado para o SUS com úlceras
+                        <span class="source-tooltip">Fonte: Sociedade Brasileira de Angiologia e de Cirurgia Vascular (SBACV), 2023.</span>
+                    </p>
                 </div>
             </div>
             <p>A prevenção atual, baseada em exames clínicos pontuais, muitas vezes falha em detectar os sinais precoces de inflamação e sobrecarga mecânica que levam a úlceras e amputações.</p>
@@ -105,5 +120,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="interactive_stats.js"></script> 
 </body>
 </html>
