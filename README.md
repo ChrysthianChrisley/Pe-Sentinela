@@ -36,20 +36,23 @@ Nossa solução se baseia na **coleta de dados longitudinal e simultânea** de t
 
 ## 📂 Estrutura do Projeto
 
-O projeto segue uma estrutura padrão para aplicações web, visando a clareza e manutenibilidade:
-Pe-Sentinela/
-├── .gitignore
-├── README.md
-├── index.html
-├── .hintrc
-├── pages/
-│   ├── analiseComparativa.html
-│   └── prototipo.html
-├── css/
-│   └── style.css
-└── js/
-├── main_script.js
-└── prototipo_script.js
+## 📂 Estrutura do Projeto
+
+O projeto segue uma estrutura padrão para aplicações web, visando a clareza e manutenibilidade do código:
+
+- 📁 **Pe-Sentinela/**
+  - 📄 `index.html`
+  - 📄 `README.md`
+  - 📄 `.gitignore`
+  - 📄 `.hintrc`
+  - 📁 `pages/`
+    - 📄 `analiseComparativa.html`
+    - 📄 `prototipo.html`
+  - 📁 `css/`
+    - 📄 `style.css`
+  - 📁 `js/`
+    - 📄 `main_script.js`
+    - 📄 `prototipo_script.js`
 
 ---
 
