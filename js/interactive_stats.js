@@ -6,14 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const step = (timestamp) => {
             if (!startTimestamp) startTimestamp = timestamp;
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            // Usamos uma função de "easing" para uma animação mais suave no final
-            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            const easedProgress = 1 - Math.pow(1 - progress, 3); // Efeito de desaceleração
             const currentNumber = Math.floor(easedProgress * (end - start) + start);
             
             element.innerHTML = `${prefix}${currentNumber.toLocaleString('pt-BR')}${suffix}`;
             
             if (progress < 1) {
                 window.requestAnimationFrame(step);
+            } else {
+                // Garante que o número final seja exibido ao terminar a animação
+                element.innerHTML = `${prefix}${end.toLocaleString('pt-BR')}${suffix}`;
             }
         };
         window.requestAnimationFrame(step);
@@ -28,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             textElement.textContent = Math.floor(progress * endPercentage);
             if (progress < 1) {
                 window.requestAnimationFrame(step);
+            } else {
+                textElement.textContent = endPercentage;
             }
         };
         window.requestAnimationFrame(step);
@@ -52,23 +56,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 const custoHeading = document.getElementById('custo-heading');
                 
                 // Animação de Amputações
-                animateCounter(amputacoesCounter, 0, 282000, 2000);
-                 setTimeout(() => {
-                    amputacoesCounter.innerHTML = "+282.000 mil";
-                }, 2000);
+                animateCounter(amputacoesCounter, 0, 282000, 2000, '+', ' mil');
 
                 // Animação da Barra de Progresso
                 animateProgressBar(prevencaoBar, prevencaoCounter, 85, 2000);
 
-                // --- CORREÇÃO APLICADA AQUI ---
-                // 1. Anima o contador de Custo até 1 bilhão
+                // --- LÓGICA CORRIGIDA PARA O CONTADOR DE CUSTO ---
+                // 1. Anima o contador de Custo até 1 bilhão.
                 animateCounter(custoHeading, 0, 1000000000, 2500, 'R$ ');
 
-                // 2. No final exato da animação, substitui o conteúdo pelo texto final.
-                // Esta função será a última a modificar o elemento.
+                // 2. Agenda a troca de texto para um instante DEPOIS do final da animação.
+                //    Isso garante que a troca seja a última operação.
                 setTimeout(() => {
                     custoHeading.innerHTML = "R$ 1 Bilhão";
-                }, 2500); // O tempo DEVE ser igual à duração da animação
+                }, 2550); // Aumentamos o tempo em 50ms para garantir que a animação terminou
 
                 observer.unobserve(statsSection);
             }
